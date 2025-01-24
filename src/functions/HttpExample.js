@@ -16,7 +16,7 @@ app.hook.appStart(async (context) => {
 
 app.hook.appTerminate(async (context) => {
     aiClient.trackTrace({message: "appTerminate:start"});
-    console.log("appStartHook:start");
+    console.log("appTerminate:start");
     const _ = await wait(1000);
     aiClient.trackTrace({message: "appTerminate:end"});
     console.log("appTerminate:end");
